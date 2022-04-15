@@ -1,48 +1,40 @@
 package khodro;
 
-public class Mashin {
+public class Mashin extends Khodro {
 
-    boolean ayaRoshanAst;   //pish farz false ast
-    boolean ayadarBazAst;   //pish farz false ast
-    String mark;
-    Ranande ranande;
+            boolean ayadarBazAst;   //pish farz false ast
+            String mark;
+            Ranande ranande;
 
-    public Mashin() {
+            public Mashin() {
 
-    }
-    public Mashin(String mark) {
-        this.mark = mark;
+            }
 
-    }
+            public Mashin(String mark) {
+                this.mark = mark;
 
-    public void roshan() {
+            }
 
-        ayaRoshanAst = true;
-    }
+            void bazKardandar() {
 
-    void khamoush() {
+                ayadarBazAst = true;
+            }
 
-        ayaRoshanAst = false;
-    }
+            void bastanDar() {
 
-    void bazKardandar() {
+                ayadarBazAst = false;
+            }
 
-        ayadarBazAst = true;
-    }
+            public boolean ayaDarHaleHarekatAst() {
+                if (!ayadarBazAst && ayaRoshanAst) {
 
-    void bastanDar() {
+                    return true;
+                } else {
 
-        ayadarBazAst = false;
-    }
-
-    public boolean ayaMashinDarHarekatAst() {
-        if (!ayadarBazAst && ayaRoshanAst){
-
-            return true;
-        }else {
-
-            return false;
-        }
-    }
+                    return false;
+                }
+            }
 
 }
+
+

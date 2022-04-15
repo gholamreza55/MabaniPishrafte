@@ -12,9 +12,9 @@ public class MashinTest {
         Mashin benz = new Mashin("Benz");
         Mashin volvo = new Mashin("volvo");
 
-        boolean ayaharekatMikonad = benz.ayaMashinDarHarekatAst();
+        boolean ayaharekatMikonad = benz.ayaDarHaleHarekatAst();
         volvo.roshan();
-        boolean ayaVolvoHarekatMikonad = volvo.ayaMashinDarHarekatAst();
+        boolean ayaVolvoHarekatMikonad = volvo.ayaDarHaleHarekatAst();
 
         assertFalse(ayaharekatMikonad);
         assertTrue(ayaVolvoHarekatMikonad);
