@@ -21,7 +21,6 @@ public class NamKhodroChapKon {
             }
           }
 
-
         return nameKhodroha;
     }
 }
