@@ -35,9 +35,16 @@ public class CalculatorUI {
             jTextField.setText("");
         });
 
+        JButton division = new JButton("/");
+        division.setBounds(150, 200, 50, 50);
+
 
         JButton minus = new JButton("-");
         minus.setBounds(150, 100, 50, 50);
+        minus.addActionListener(e -> {
+            adaAval = jTextField.getText();
+            jTextField.setText("");
+        });
 
         JButton multply = new JButton("*");
         multply.setBounds(150, 150, 50, 50);
@@ -54,8 +61,10 @@ public class CalculatorUI {
             jTextField.setText(addResult);
         });
         JButton nine = getButton("9", 100, 150);
-        JButton division = new JButton("/");
-        division.setBounds(150, 200, 50, 50);
+
+
+
+
         mashinHesab.add(division);
         mashinHesab.add(cancel);
         mashinHesab.add(one);
