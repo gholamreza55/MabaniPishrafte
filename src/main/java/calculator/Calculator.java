@@ -1,14 +1,19 @@
 package calculator;
 
-import javax.accessibility.AccessibleValue;
-
 import static java.lang.Double.parseDouble;
 
 public class Calculator {
-    public String add(String adadAval, String adadovo) {
-        double d1 = parseDouble(adadAval);
-        double d2 = parseDouble(adadovo);
-        double result = d1 + d2;
+
+
+    public String add(final String adadAval, final String adadDo) {
+        final double D1 = parseDouble(adadAval);
+        final double D2 = parseDouble(adadDo);
+        final double result = D1 +D2;
+
+
+
         return String.valueOf(result);
     }
-}
+
+    }
+
