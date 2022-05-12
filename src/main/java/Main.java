@@ -1,4 +1,5 @@
-import khodro.jadid.Mashin;
+import khodro.mashin.Dande;
+import khodro.mashin.Mashin;
 
 import java.util.Scanner;
 
@@ -14,8 +15,8 @@ public class Main {
 
         String mark = args[0];
         String gonjayeshSandogh = args[1];
-        String noe = args[2];
-        Mashin mashin = new Mashin(mark, Integer.parseInt(gonjayeshSandogh), noe);
+        Dande noeDande =Dande.valueOf(args[2]);
+        Mashin mashin = new Mashin(mark, Integer.parseInt(gonjayeshSandogh), noeDande);
         if (mashin.ayaDarHaleHarekatAst()) {
             out.println("aya Dar Hale Harekat Ast");
         }else {

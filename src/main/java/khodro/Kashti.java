@@ -1,7 +1,5 @@
 package khodro;
 
-import khodro.jadid.Mashin;
-
 public class Kashti extends Khodro {
 
     @Override
@@ -26,4 +24,17 @@ public class Kashti extends Khodro {
     public String getmark() {
         return "khodro.Kashti";
     }
+
+    public void prntRefrence() {
+        System.out.println(this.toString());
+    }
+    public void printRefrenceObject(Object o) {
+        System.out.println(o);
+    }
+    public void printRefrenceObject(String Object, int newParam) {
+        System.out.println(Object);
+    }
+//    public String printRefrenceObject(String Object, int newParam) {
+//        return "";
+//    }
 }

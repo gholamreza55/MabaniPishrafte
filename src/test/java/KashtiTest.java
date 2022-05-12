@@ -1,5 +1,7 @@
 import khodro.Kashti;
 import khodro.Khodro;
+import khodro.mashin.Dande;
+import khodro.mashin.Mashin;
 import org.junit.jupiter.api.Test;
 
 public class KashtiTest {
@@ -18,13 +20,15 @@ public class KashtiTest {
     void super_keword() {
         Khodro kashti = new Kashti();
 
-
-
         System.out.println(kashti.toString());
+    }
 
-
-
-
-
+    @Test
+    void this_keword() {
+        Kashti kashti = new Kashti();
+        Mashin mashin = new Mashin("zhian", 25 , Dande.MANUAL);
+        kashti.prntRefrence();
+        kashti.printRefrenceObject(this);
+        kashti.printRefrenceObject(mashin);
     }
 }
