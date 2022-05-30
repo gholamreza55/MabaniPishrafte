@@ -12,6 +12,7 @@ public class MashinTest {
 
         Khodro benz = new Mashin("Benz");
         Khodro volvo = new Mashin("volvo");
+        volvo.roshan();
 
         boolean ayaharekatMikonad = benz.ayaDarHaleHarekatAst();
         volvo.roshan();

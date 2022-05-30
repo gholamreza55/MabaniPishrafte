@@ -5,9 +5,7 @@ public class NamKhodroChapKon {
     Khodro[] khodroha;
     public NamKhodroChapKon(Khodro[] khodroha) {
         this.khodroha = khodroha;
-
     }
-
     public String excute() {
         String nameKhodroha = "";
         for ( int neshanghar = 0; neshanghar < khodroha.length; neshanghar++) {

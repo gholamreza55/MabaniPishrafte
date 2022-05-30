@@ -1,3 +1,5 @@
+import khodro.Khodro;
+import khodro.Motor;
 import khodro.mashin.Dande;
 import khodro.mashin.Mashin;
 
@@ -8,6 +10,8 @@ import static java.lang.System.out;
 public class Main {
 
     public static void main(String[] args) {
+
+
         for (int index = 0; index < args.length; index++) {
             out.println(args[index]);
 
