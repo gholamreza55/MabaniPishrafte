@@ -8,6 +8,7 @@ public class Foroshande {
         namForoshandeghan[0] ="ali";
         namForoshandeghan[1] = "ahmad";
         namForoshandeghan[2] = "akbar";
+        System.out.println(namForoshandeghan[1]);
     }
     public void forosheMashin() {
 

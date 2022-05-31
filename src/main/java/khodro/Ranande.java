@@ -17,7 +17,7 @@ public class Ranande {
     public static class Staticgavahi {
         public void print() {
             System.out.println("class non static : ");
-          //  System.out.println(noegavahi);
+       //     System.out.println(noegavahi);
             System.out.println(nam);
         }
     }

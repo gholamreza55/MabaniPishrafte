@@ -6,17 +6,16 @@ import org.junit.jupiter.api.Test;
 public class ForoshandeMashinTest {
     @Test
     void Bayad_Tedade_Kol_Mashin_Haye_Forokhte_Shode_Ra_Be_Dast_Avarim() {
-        Foroshande Ali = new Foroshande();
-        Foroshande naser = new Foroshande();
-        Foroshande akbar = new Foroshande();
+      Foroshande f = new Foroshande();
+      f.forosheMashin();
 
-        Ali.forosheMashin();
-        Ali.forosheMashin();
-        Ali.forosheMashin();
-        Ali.forosheMashin();
-        naser.forosheMashin();
-        akbar.forosheMashin();
+      Foroshande s = new Foroshande();
+      
 
-        Assertions.assertEquals(6, Mashin.tedadeForosh);
+
+
+
+
+        Assertions.assertEquals(1, Mashin.tedadeForosh);
     }
 }

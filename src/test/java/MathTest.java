@@ -14,6 +14,6 @@ public class MathTest {
 
         assertEquals(1.5, meghdareMotlagh);
         assertEquals(1, Math.cos(0));
-        assertEquals(0, Math.sin(0));
+        assertEquals(0.8939966636005579, Math.sin(90));
     }
 }
