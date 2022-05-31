@@ -1,8 +1,10 @@
-package khodro.mashin;
+package khodro;
 import khodro.Gearbox;
 import khodro.Khodro;
 import khodro.Ranande;
 import khodro.SandoghDar;
+import khodro.mashin.Dande;
+
 public class Mashin extends Khodro implements SandoghDar, Gearbox {
             public static int tedadeForosh;
             private boolean ayadarBazAst;   //pish farz false ast

@@ -1,6 +1,6 @@
 package foroshande;
 
-import khodro.mashin.Mashin;
+import khodro.Mashin;
 
 public class Foroshande {
     public static String[] namForoshandeghan = new String[10];

@@ -1,7 +1,5 @@
-import khodro.Khodro;
-import khodro.Motor;
 import khodro.mashin.Dande;
-import khodro.mashin.Mashin;
+import khodro.Mashin;
 
 import java.util.Scanner;
 

@@ -1,7 +1,7 @@
 import khodro.Kashti;
 import khodro.Khodro;
 import khodro.mashin.Dande;
-import khodro.mashin.Mashin;
+import khodro.Mashin;
 import org.junit.jupiter.api.Test;
 
 public class KashtiTest {
