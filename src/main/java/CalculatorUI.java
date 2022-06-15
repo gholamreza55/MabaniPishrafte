@@ -49,6 +49,7 @@ public class CalculatorUI {
         });
 
         JButton multply = new JButton("*");
+
         multply.setBounds(150, 150, WIDTH, HEIGHT);
 
         JButton point = getButton(".", 0, 200);

@@ -9,9 +9,6 @@ public class Calculator {
         final double D1 = parseDouble(adadAval);
         final double D2 = parseDouble(adadDo);
         final double result = D1 +D2;
-
-
-
         return String.valueOf(result);
     }
 

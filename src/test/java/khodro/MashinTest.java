@@ -1,6 +1,9 @@
+package khodro;
+
 import khodro.Khodro;
 import khodro.Mashin;
 
+import khodro.mashin.Dande;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -24,7 +27,10 @@ public class MashinTest {
 
     }
 
-
-
+    @Test
+    void bayad_Print_Konad() {
+        Mashin Pej = new Mashin("pejo", 67, Dande.MANUAL);
+        System.out.println(Pej.toString());
     }
+}
 

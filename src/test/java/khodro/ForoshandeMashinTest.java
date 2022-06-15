@@ -1,3 +1,5 @@
+package khodro;
+
 import foroshande.Foroshande;
 import khodro.Mashin;
 import org.junit.jupiter.api.Assertions;

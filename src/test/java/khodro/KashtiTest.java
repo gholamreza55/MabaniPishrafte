@@ -1,3 +1,5 @@
+package khodro;
+
 import khodro.Kashti;
 import khodro.Khodro;
 import khodro.mashin.Dande;
@@ -19,7 +21,9 @@ public class KashtiTest {
     @Test
     void super_keword() {
         Khodro kashti = new Kashti();
+        Khodro kashti1 = new Kashti();
 
+        System.out.println(kashti1.toString());
         System.out.println(kashti.toString());
     }
 
@@ -31,4 +35,6 @@ public class KashtiTest {
         kashti.printRefrenceObject(this);
         kashti.printRefrenceObject(mashin);
     }
+
+
 }
