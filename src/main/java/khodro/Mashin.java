@@ -1,11 +1,7 @@
 package khodro;
-import khodro.Gearbox;
-import khodro.Khodro;
-import khodro.Ranande;
-import khodro.SandoghDar;
 import khodro.mashin.Dande;
-
-public class Mashin extends Khodro implements SandoghDar, Gearbox {
+import java.util.Objects;
+public class Mashin extends Khodro implements SandoghDar, Gearbox, Comparable<Mashin>{
             public static int tedadeForosh;
             private boolean ayadarBazAst;   //pish farz false ast
             private String mark;
@@ -48,9 +44,9 @@ public class Mashin extends Khodro implements SandoghDar, Gearbox {
             public int gonjayeshSandogh() {
                 return gonjayeshSandogh;
               }
-    @Override
-    public String toString() {
-        return "Mashin{" +
+            @Override
+            public String toString() {
+            return "Mashin{" +
                 "ayadarBazAst=" +this.ayadarBazAst +
                 ", mark='" + this.mark + '\'' +
                 ", gonjayeshSandogh=" + this.gonjayeshSandogh +
@@ -58,6 +54,31 @@ public class Mashin extends Khodro implements SandoghDar, Gearbox {
                 +this.noeDande.Tofrench() + '\'' +
                 ", ranande=" + this.ranande +
                 '}';
+    }
+            @Override
+            public boolean equals(Object o) {
+            if (this == o)
+             return true;
+            if (o == null || getClass() != o.getClass())
+             return false;
+            Mashin mashin = (Mashin) o;
+             return gonjayeshSandogh == mashin.gonjayeshSandogh
+                && Objects.equals(mark, mashin.mark)
+                && noeDande == mashin.noeDande;
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(mark, gonjayeshSandogh, noeDande);
+    }
+
+    @Override
+    public int compareTo(Mashin mashinDighar) {
+        int moghayesheGonjayeshSndoug =
+                Integer.compare(this.gonjayeshSandogh, mashinDighar.gonjayeshSandogh);
+        if (moghayesheGonjayeshSndoug == 0) {
+
+        }
+        return moghayesheGonjayeshSndoug;
     }
 }
 

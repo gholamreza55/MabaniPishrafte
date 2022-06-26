@@ -1,18 +1,14 @@
 import calculator.Calculator;
-
 import javax.swing.*;
 
 public class CalculatorUI {
-
     public static final int WIDTH = 50;
     public static final int HEIGHT = 50;
     private static JTextField jTextField;
     private static String adaAval;
 
     public static void main(String... args) {
-
         JFrame mashinHesab = new JFrame("Mashin hesab");  //1
-
         jTextField = new JTextField();  //5
         jTextField.setBounds(0, 0, 150, 50);  //6
         jTextField.setEditable(false);  //8
@@ -40,7 +36,6 @@ public class CalculatorUI {
         JButton division = new JButton("/");
         division.setBounds(150, 200, WIDTH, HEIGHT);
 
-
         JButton minus = new JButton("-");
         minus.setBounds(150, 100, WIDTH, HEIGHT);
         minus.addActionListener(e -> {
@@ -49,7 +44,6 @@ public class CalculatorUI {
         });
 
         JButton multply = new JButton("*");
-
         multply.setBounds(150, 150, WIDTH, HEIGHT);
 
         JButton point = getButton(".", 0, 200);
@@ -64,9 +58,6 @@ public class CalculatorUI {
             jTextField.setText(addResult);
         });
         JButton nine = getButton("9", 100, 150);
-
-
-
 
         mashinHesab.add(division);
         mashinHesab.add(cancel);
@@ -90,8 +81,8 @@ public class CalculatorUI {
         mashinHesab.setSize(400, 400);  //2
         mashinHesab.setLayout(null); //3
         mashinHesab.setVisible(true);  //4
-
     }
+
     private static JButton getButton(String label, int xPosition, int yPosition) {
         JButton button = new JButton(label);
         button.setBounds(xPosition, yPosition, WIDTH, HEIGHT);

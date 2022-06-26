@@ -13,7 +13,8 @@ public class CalculatorTest {
 
     }
 
-
-
-
+    @Test
+    void Bayad_NumberFormatException_Jadid() {
+        Calculator calculator = new Calculator();
+    }
 }
