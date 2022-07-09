@@ -1,4 +1,5 @@
 package collection;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import java.util.*;
 public class ArrayListTest {
@@ -15,13 +16,17 @@ public class ArrayListTest {
         animal.add("Cat");
         animal.add("Rabbit");
         Collections.sort(animal);
+    //    Assertions.assertThat(animal).isEmpty();
+
         LinkedList<String> sortanimal = new LinkedList<>();
+
+        sortanimal.add("Cat");
+        sortanimal.add("Cat");
+        sortanimal.add("Cat");
         sortanimal.add("Dog");
-        sortanimal.add("Cat");
-        sortanimal.add("Cat");
-        sortanimal.add("Cat");
         sortanimal.add("Rabbit");
-        System.out.println(animal.equals(sortanimal));
+        Assertions.assertThat(animal).isEqualTo(sortanimal);
+       // System.out.println(animal.equals(sortanimal));
     }
     @Test
     void should_be_innutable() {
@@ -44,15 +49,18 @@ public class ArrayListTest {
         animals.add("Rabbit");
         Collections.reverse(animals);
         List<String> reverseAnimal = new ArrayList<>();
-        reverseAnimal.add("Dog");
-        reverseAnimal.add("Cat");
-        reverseAnimal.add("Cat");
-        reverseAnimal.add("Cat");
         reverseAnimal.add("Rabbit");
-        System.out.println(reverseAnimal.indexOf("Rabbit"));
-        System.out.println(animals.equals(reverseAnimal));
-        System.out.println(animals.indexOf("Cat"));
-        System.out.println(reverseAnimal.contains("Dog"));
+        reverseAnimal.add("Cat");
+        reverseAnimal.add("Cat");
+        reverseAnimal.add("Cat");
+        reverseAnimal.add("Dog");
+        Assertions.assertThat(reverseAnimal.indexOf("Cat")).isEqualTo(1);
+
+     //   System.out.println(reverseAnimal.indexOf("Rabbit"));
+        Assertions.assertThat(animals).isEqualTo(reverseAnimal);
+       // System.out.println(animals.equals(reverseAnimal));
+     //   System.out.println(animals.indexOf("Cat"));
+      //  System.out.println(reverseAnimal.contains("Dog"));
     }
     @Test
     void Ginen_an_array_return() {
@@ -65,11 +73,15 @@ public class ArrayListTest {
         arraylistnumber.add(111);
         List<Integer> expected = new LinkedList<>();
         expected.add(1);
-        expected.add(66);
+        expected.add(2);
         expected.add(3);
-        expected.add(99);
+        expected.add(4);
+        expected.add(4);
+        expected.add(2);
+        expected.add(1);
         expected.add(111);
-        System.out.println(arraylistnumber.equals(expected));
+        Assertions.assertThat(arraylistnumber).isEqualTo(expected);
+      //  System.out.println(arraylistnumber.equals(expected));
         System.out.println(expected);
     }
      class Converter {
