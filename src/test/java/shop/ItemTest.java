@@ -12,8 +12,8 @@ public class ItemTest {
 
     @BeforeEach
     void setUp() {
-        shoppingservice = new shoppingserviceImpl(new ShoppingDAOImpl());
-        List<Item> itemList = new LinkedList<>();
+        shoppingservice = new shoppingserviceImpl(new ShoppingDAOImmplDouble());
+        itemList = new LinkedList<>();
     }
 
     @Test
@@ -31,6 +31,7 @@ public class ItemTest {
         itemList.add(new Item(null, 2));
         assertThrows(ItemNameException.class, () -> shoppingservice.saveItems(itemList));
     }
+
     @Test
     void should_throw_item_rmpty() {
         itemList = new LinkedList<>();
@@ -38,6 +39,7 @@ public class ItemTest {
         itemList.add(new Item("Orange", 2));
         assertThrows(ItemNameException.class, () -> shoppingservice.saveItems(itemList));
     }
+
     @Test
     void should_throw_item_quantity() {
         itemList = new LinkedList<>();
@@ -45,18 +47,33 @@ public class ItemTest {
         itemList.add(new Item("Orange", 2));
         assertThrows(ItemNameException.class, () -> shoppingservice.saveItems(itemList));
     }
+
     @Test
-    void should_throw_item_quantity1 () {
+    void should_throw_item_quantity1() {
         itemList = new LinkedList<>();
         itemList.add(new Item("Banana", 0));
         itemList.add(new Item("Orange", 2));
         assertThrows(ItemQuantityException.class, () -> shoppingservice.saveItems(itemList));
     }
+
     @Test
-    void should_throw_item_quantity100 () {
+    void should_throw_item_quantity100() {
         itemList = new LinkedList<>();
         itemList.add(new Item("Banana", 20));
         itemList.add(new Item("Orange", 101));
         assertThrows(ItemQuantityException.class, () -> shoppingservice.saveItems(itemList));
+    }
+
+    public class ShoppingDAOImmplDouble implements ShoppingDAO {
+        @Override
+        public List<Item> FindAllitems() {
+            return null;
+        }
+
+        @Override
+        public void saveItems(List<Item> items) {
+            System.out.println("save Item of class ShoppingDAOImplDouble is called");
+
+        }
     }
 }

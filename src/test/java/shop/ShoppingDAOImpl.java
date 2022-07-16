@@ -40,7 +40,6 @@ public class ShoppingDAOImpl {
             insert.setString(1, "Orange");
             insert.setInt(2, 5);
             insert.executeUpdate();
-
             final ResultSet resultSet = select.executeQuery();
 
             while (resultSet.next()){
