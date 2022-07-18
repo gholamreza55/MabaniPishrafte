@@ -15,6 +15,9 @@ public class ShoppingDAOImpl implements ShoppingDAO{
     public static final String PASSWORD = "1372165509";
     public static final String INSERT_SQL = "INSERT INTO item (name, quantity) VALUES (?, ?)";
     public static final String SELECT_SQL = "SELECT * FROM item";
+    public ShoppingDAOImpl(){
+
+    }
 
     @Override
     public List<Item> FindAllitems() {
