@@ -29,7 +29,8 @@ public class ItemTest {
         itemList = new LinkedList<>();
         itemList.add(new Item("Banana", 5));
         itemList.add(new Item(null, 2));
-        assertThrows(ItemNameException.class, () -> shoppingservice.saveItems(itemList));
+        assertThrows(ItemNameException.class, () ->
+                shoppingservice.saveItems(itemList));
     }
 
     @Test
@@ -37,7 +38,8 @@ public class ItemTest {
         itemList = new LinkedList<>();
         itemList.add(new Item("", 5));
         itemList.add(new Item("Orange", 2));
-        assertThrows(ItemNameException.class, () -> shoppingservice.saveItems(itemList));
+        assertThrows(ItemNameException.class, () ->
+                shoppingservice.saveItems(itemList));
     }
 
     @Test
@@ -45,7 +47,8 @@ public class ItemTest {
         itemList = new LinkedList<>();
         itemList.add(new Item("", 5));
         itemList.add(new Item("Orange", 2));
-        assertThrows(ItemNameException.class, () -> shoppingservice.saveItems(itemList));
+        assertThrows(ItemNameException.class, () ->
+                shoppingservice.saveItems(itemList));
     }
 
     @Test
@@ -53,7 +56,8 @@ public class ItemTest {
         itemList = new LinkedList<>();
         itemList.add(new Item("Banana", 0));
         itemList.add(new Item("Orange", 2));
-        assertThrows(ItemQuantityException.class, () -> shoppingservice.saveItems(itemList));
+        assertThrows(ItemQuantityException.class, () ->
+                shoppingservice.saveItems(itemList));
     }
 
     @Test
@@ -61,7 +65,8 @@ public class ItemTest {
         itemList = new LinkedList<>();
         itemList.add(new Item("Banana", 20));
         itemList.add(new Item("Orange", 101));
-        assertThrows(ItemQuantityException.class, () -> shoppingservice.saveItems(itemList));
+        assertThrows(ItemQuantityException.class, () ->
+                shoppingservice.saveItems(itemList));
     }
 
     public class ShoppingDAOImmplDouble implements ShoppingDAO {
@@ -73,7 +78,6 @@ public class ItemTest {
         @Override
         public void saveItems(List<Item> items) {
             System.out.println("save Item of class ShoppingDAOImplDouble is called");
-
         }
     }
 }
